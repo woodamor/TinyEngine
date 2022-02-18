@@ -120,3 +120,8 @@ Mesh::Mesh(const Mesh& mesh)
 	m_indices = mesh.m_indices;
 	m_vertices = mesh.m_vertices;
 }
+
+bool Mesh::isValid() const
+{
+	return !m_vertices.empty() && !m_indices.empty();
+}

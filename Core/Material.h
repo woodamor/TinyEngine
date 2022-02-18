@@ -26,7 +26,9 @@ namespace Engine
 		virtual ~Material();
 
 	public:
-		void apply(); // if texture is not binded, use color
+		void apply();   // if texture is not binded, use color
+		void restore(); //
+
 		void bindTexture(Texture* texture);
 		void enableTexture(bool enable = true);
 

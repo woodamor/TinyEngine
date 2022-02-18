@@ -23,8 +23,11 @@ namespace Engine
 		Mesh(const Mesh& mesh);
 		~Mesh() = default;
 
+	public:
 	static std::shared_ptr<Mesh> createUnitCubeMesh();
 	static Mesh* createBoxMesh(float x, float y, float z); // user holds object
+
+	bool isValid() const;
 
 	public:
 		std::vector<Vertex> m_vertices;

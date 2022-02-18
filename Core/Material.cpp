@@ -40,6 +40,11 @@ void Material::apply()
 	}
 }
 
+void Material::restore()
+{
+
+}
+
 void Material::bindTexture(Texture* texture)
 {
 	m_texture.reset(texture);

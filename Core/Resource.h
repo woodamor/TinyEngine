@@ -18,4 +18,18 @@ namespace Engine
 	protected:
 		bool m_isLoaded = false;
 	};
+
+
+	//class ResourcePool
+	//{
+	//public:
+	//	static ResourcePool* getInstance();
+
+	//private:
+	//	std::vector<Resource*> m_resources;
+
+	//private:
+	//	ResourcePool();
+	//	~ResourcePool();
+	//};
 }

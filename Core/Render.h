@@ -1,9 +1,8 @@
 #pragma once
 
+#include <gl/GL.h>
 
 namespace Engine {
-
-	typedef unsigned int GLenum;
 
 	class Mesh;
 	class Material;
@@ -11,9 +10,9 @@ namespace Engine {
 	class Render
 	{
 	public:
-		Render();
+		Render() = default;
 		Render(Mesh* mesh, Material* material) :m_mesh(mesh), m_material(material) {};
-		virtual ~Render();
+		virtual ~Render() = default;
 
 		void setDrawType(GLenum drawType);
 

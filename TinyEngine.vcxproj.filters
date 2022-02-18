@@ -80,5 +80,11 @@
     <ClCompile Include="Core\Material.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="Core\Render.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Texture.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

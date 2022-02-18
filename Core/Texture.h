@@ -15,7 +15,7 @@ namespace Engine
 		virtual ~Texture();
 
 	public:
-		static Texture* getOrCreateTexture(const std::string& srcPath);
+		static Texture* create2DTexture(const std::string& srcPath);
 
 		void setTarget(GLenum target);
 		void setWrap(GLint wrapS, GLint wrapT);
@@ -29,6 +29,8 @@ namespace Engine
 		virtual void apply() override;
 
 	public:
+		static GLuint m_currentID;
+
 		GLuint m_id;				// texture id 
 		std::string m_srcPath;		// texture image path
 

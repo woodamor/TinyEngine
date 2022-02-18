@@ -170,6 +170,8 @@
     <ClCompile Include="Core\Material.cpp" />
     <ClCompile Include="Core\Mesh.cpp" />
     <ClCompile Include="Core\Object.cpp" />
+    <ClCompile Include="Core\Render.cpp" />
+    <ClCompile Include="Core\Texture.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="LiteMathLib\Bounding.cpp" />
     <ClCompile Include="LiteMathLib\Point.cpp" />
