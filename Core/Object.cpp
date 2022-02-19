@@ -73,7 +73,7 @@ void Object::apply()
 	glPopMatrix();
 }
 
-void Object::draw()
+void Engine::Object::draw() const
 {
 
 }
@@ -133,7 +133,7 @@ Render* DrawableObject::getOrCreateRender()
 	return m_render.get();
 }
 
-void DrawableObject::draw()
+void Engine::DrawableObject::draw() const
 {
 	m_render->bindMaterial(m_material.get());
 	m_render->bindMesh(m_mesh.get());

@@ -30,7 +30,7 @@ namespace Engine {
 		glm::mat4 getTransformMatrix() const;
 
 		void apply();		 // object is going to do something with draw()
-		virtual void draw(); // send GL draw calls
+		virtual void draw() const; // send GL draw calls
 
 		void translate(float x = 0.0, float y = 0.0, float z = 0.0);
 		void translate(const Vector& point);
@@ -41,7 +41,7 @@ namespace Engine {
 		std::string m_name;
 		std::vector<Object*> m_children;
 
-		glm::mat4 m_transform = glm::mat4(1.0f);
+		glm::mat4 m_transform = glm::mat4(1.0f);		// geometric relationship relative to parent object
 	};
 
 
@@ -63,7 +63,7 @@ namespace Engine {
 		virtual Mesh* getOrCreateMesh();
 		virtual Render* getOrCreateRender();
 
-		void draw() override;
+		void draw() const override;
 
 	private:
 		bool m_isVisible = true;
