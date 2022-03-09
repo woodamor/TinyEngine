@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include <vector>
 #include <memory>
 
@@ -8,7 +9,7 @@
 namespace Engine {
 	
 	/*
-		SceneNode is a warper of one object that displayed in a scene
+		SceneNode is a warper of ONLY ONE object that displayed in a scene
 		Ways to organize SceneNodes varies in different scenarios.
 		For example, one may use octree and frustum culling to handle a 3D scene 
 		with a large amount of drawable objects
@@ -22,22 +23,28 @@ namespace Engine {
 	class SceneNode {
 	public:
 		SceneNode();
+		SceneNode(const std::string& name) :m_name(name) {};
 		virtual ~SceneNode();
 
+		typedef std::vector<SceneNode*> nodeList;
+
 	public:
+		std::string getName() const;
 		void bindObject(Object* object);
-		Object* createObject();
 
 		void addSceneNode(SceneNode* node);
 		void deleteSceneNode(SceneNode* node);
 
-		virtual void display() const;		// display object and recursively display all children
+		virtual void display();		// display object and recursively display all children
 
 	private:
+		std::string m_name;
 		glm::mat4 m_transform = glm::mat4(1.0f);
 
-		std::shared_ptr<Object> m_object;
-		std::vector<SceneNode*> m_childern;
+		Object* m_object = nullptr;
+		
+		SceneNode* m_parent;
+		nodeList m_childern;
 	};
 
 	class Camera;
@@ -61,10 +68,10 @@ namespace Engine {
 	public:
 		Lighting* getOrCreateLighting();
 
-		Camera* getOrCreateMainCamera();
+		Camera* getOrCreateCamera(const std::string& name);
 		void attachCamera(Camera* camera);
 
-		SceneNode* getOrCreateSceneNode();
+		SceneNode* getOrCreateSceneNode(const std::string& name);
 		void bindSceneNode(SceneNode* node);
 		void bindSceneNode(const std::vector<SceneNode*>& nodes);
 

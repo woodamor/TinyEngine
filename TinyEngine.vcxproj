@@ -163,21 +163,27 @@
     <ClInclude Include="Core\Resource.h" />
     <ClInclude Include="Core\SceneManager.h" />
     <ClInclude Include="Core\Texture.h" />
+    <ClInclude Include="Core\Tree.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="LiteMathLib\Bounding.h" />
+    <ClInclude Include="LiteMathLib\Frustum.h" />
     <ClInclude Include="LiteMathLib\Point.h" />
     <ClInclude Include="LiteMathLib\Sphere.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Core\Camera.cpp" />
+    <ClCompile Include="Core\Lighting.cpp" />
     <ClCompile Include="Core\Material.cpp" />
     <ClCompile Include="Core\Mesh.cpp" />
     <ClCompile Include="Core\Object.cpp" />
     <ClCompile Include="Core\Render.cpp" />
     <ClCompile Include="Core\SceneManager.cpp" />
     <ClCompile Include="Core\Texture.cpp" />
+    <ClCompile Include="Core\Tree.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="LiteMathLib\Bounding.cpp" />
+    <ClCompile Include="LiteMathLib\Frustum.cpp" />
     <ClCompile Include="LiteMathLib\Point.cpp" />
     <ClCompile Include="LiteMathLib\Sphere.cpp" />
     <ClCompile Include="pch.cpp">

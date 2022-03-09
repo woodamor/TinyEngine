@@ -63,6 +63,12 @@
     <ClInclude Include="Core\Lighting.h">
       <Filter>Core</Filter>
     </ClInclude>
+    <ClInclude Include="LiteMathLib\Frustum.h">
+      <Filter>LiteMathLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Tree.h">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -97,6 +103,18 @@
     </ClCompile>
     <ClCompile Include="Core\SceneManager.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LiteMathLib\Frustum.cpp">
+      <Filter>LiteMathLib</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Camera.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Lighting.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Tree.cpp">
+      <Filter>Core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -25,7 +25,7 @@ namespace Engine {
 		Point& scaleSelf(float x = 1.0f, float y = 1.0f, float z = 1.0f);
 
 	private:
-		glm::vec3 m_point; // homogenous  x,y,z,0
+		glm::vec3 m_point = glm::vec3(0.0f); // homogenous  x,y,z,0
 	};
 
 	typedef Point Vector; // x,y,z,1

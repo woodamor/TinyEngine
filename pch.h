@@ -10,9 +10,14 @@
 // add headers that you want to pre-compile here
 #include "framework.h"
 #include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 #include <string>
 #include <memory>
 #include <vector>
+
+#include <assert.h>
+
+#include <gl/GL.h>
 
 #endif //PCH_H
